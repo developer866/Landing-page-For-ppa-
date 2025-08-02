@@ -2,7 +2,7 @@ import React from "react";
 
 function Home() {
   return (
-    <main className="h-[100vh] w-full md:px-10 px-4 flex flex-col md:flex-row items-center justify-between">
+    <main className="h-[100vh] w-full md:px-10 px-4 flex flex-col md:flex-row items-center justify-between" id='Home'>
       {/* Left Section */}
       <div className="flex-1 flex flex-col justify-center md:px-10 px-4">
         <p className="text-[#DF6951] font-extrabold text-lg md:text-xl mb-5">
