@@ -2,17 +2,17 @@ import React, { useState, useRef, useEffect } from "react";
 
 function Nav() {
   const [show, setShow] = useState(true);
-  const menuRef = useRef(null);
+  const mobileMenuRef = useRef(null); // Separate ref for mobile menu
 
-  const showModal = () => {
+  const toggleMenu = () => {
     setShow(!show);
   };
 
-  // Close on outside click
+  // Close menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
-        setShow(true); // Close the menu
+      if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target)) {
+        setShow(true);
       }
     };
 
@@ -26,52 +26,42 @@ function Nav() {
   }, [show]);
 
   return (
-    <nav className="p-3 md:p-1 flex justify-between align-middle content-center items-center relative border">
-      <h1 className="text-3xl">DHA</h1>
+    <nav className="p-3 md:p-4 flex justify-between items-center fixed top-0 left-0 w-full z-50 bg-white shadow-md">
+      <h1 className="text-3xl font-bold">DHA</h1>
+
+      {/* Hamburger menu icon (Mobile) */}
       <img
         src="./download.png"
         alt="hamburger"
-        onClick={showModal}
-        className="md:hidden w-[7%] cursor-pointer"
+        onClick={toggleMenu}
+        className="md:hidden w-8 cursor-pointer"
       />
+
+      {/* Mobile Menu */}
       {!show && (
         <ul
-          ref={menuRef}
-          className="absolute top-0 pt-10 right-0 bg-cyan-800 h-40 w-30 md:hidden gap-2 p-4 z-50"
+          ref={mobileMenuRef}
+          className="absolute top-0 right-0 pt-12 bg-cyan-800 text-white h-40 w-40 md:hidden flex flex-col gap-2 px-4 z-50"
         >
           <img
-            onClick={() => showModal(true)}
+            onClick={toggleMenu}
             src="./icons8-close-50.svg"
             alt="close icon"
-            className="absolute top-0 right-0 w-10"
+            className="absolute top-2 right-2 w-6 cursor-pointer"
           />
-          <li>
-            <a href="#Home">Home</a>
-          </li>
-          <li>
-            <a href="#About">About</a>
-          </li>
-          <li>
-            <a href="#Program">Program</a>
-          </li>
-          <li>
-            <a href="#Contact">Contact</a>
-          </li>
+          <li><a href="#Home" onClick={toggleMenu}>Home</a></li>
+          <li><a href="#About" onClick={toggleMenu}>About</a></li>
+          <li><a href="#Program" onClick={toggleMenu}>Program</a></li>
+          <li><a href="#Contact" onClick={toggleMenu}>Contact</a></li>
         </ul>
       )}
-      <ul ref={menuRef} className="hidden md:flex gap-2 p-4 z-50">
-        <li>
-          <a href="#Home">Home</a>
-        </li>
-        <li>
-          <a href="#About">About</a>
-        </li>
-        <li>
-          <a href="#Program">Program</a>
-        </li>
-        <li>
-          <a href="#Contact">Contact</a>
-        </li>
+
+      {/* Desktop Menu */}
+      <ul className="hidden md:flex gap-6 text-gray-700 text-lg font-medium">
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#Program">Program</a></li>
+        <li><a href="#Contact">Contact</a></li>
       </ul>
     </nav>
   );
