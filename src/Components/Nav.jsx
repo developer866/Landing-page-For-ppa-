@@ -26,7 +26,7 @@ function Nav() {
   }, [show]);
 
   return (
-    <nav className="bg-gray-500 text-white p-3 md:p-1 flex justify-between align-middle content-center items-center relative">
+    <nav className="p-3 md:p-1 flex justify-between align-middle content-center items-center relative border">
       <h1 className="text-3xl">DHA</h1>
       <img
         src="./download.png"
