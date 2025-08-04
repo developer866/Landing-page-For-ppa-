@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faHatCowboy} from "@fortawesome/free-solid-svg-icons";
 
 function Testimonials() {
   return (
@@ -14,11 +16,8 @@ function Testimonials() {
             he same as knew next. Of believed or diverted no.”
           </p>
           <div className="flex items-center gap-4">
-            <img
-              src="/user1.jpg"
-              alt="Mike Taylor"
-              className="w-12 h-12 rounded-full object-cover"
-            />
+        
+            <FontAwesomeIcon icon={faHatCowboy}  class="w-12 h-12 rounded-full object-cover"/>
             <div className="text-left">
               <h4 className="font-bold text-gray-800">Mike Taylor</h4>
               <p className="text-sm text-gray-500">Lahore, Pakistan</p>
@@ -33,11 +32,8 @@ function Testimonials() {
             he same as knew next. Of believed or diverted no.”
           </p>
           <div className="flex items-center gap-4">
-            <img
-              src="/user2.jpg"
-              alt="Chris Thomas"
-              className="w-12 h-12 rounded-full object-cover"
-            />
+            <FontAwesomeIcon icon={faHatCowboy}  class="w-12 h-12 rounded-full object-cover"/>
+            
             <div className="text-left">
               <h4 className="font-bold text-gray-800">Chris Thomas</h4>
               <p className="text-sm text-gray-500">CEO of Red Button</p>

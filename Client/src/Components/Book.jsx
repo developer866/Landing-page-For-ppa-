@@ -1,8 +1,9 @@
 import React from "react";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCreditCard,faArrowsTurnToDots ,faTicket} from "@fortawesome/free-solid-svg-icons";
 function Book() {
   return (
-    <section className="py-16 px-6 md:px-16  bg-white flex flex-col md:flex-row items-center justify-between gap-12">
+    <section className="py-16 px-6 md:px-16 md:h-[100vh]  bg-white flex flex-col md:flex-row items-center justify-between gap-12">
       {/* Left Side - Steps */}
       <div className="md:w-1/2">
         <p className="text-orange-400 text-sm font-medium">Easy and Fast</p>
@@ -12,7 +13,8 @@ function Book() {
 
         <div className="space-y-6">
           <div className="flex items-start gap-4">
-            <img src="/destination-icon.png" alt="" className="w-10 h-10" />
+            {/* <img src="/destination-icon.png" alt="" " /> */}
+            <FontAwesomeIcon icon={faArrowsTurnToDots} class="w-10 h-10"/>
             <div>
               <h3 className="font-bold text-lg">Choose Destination</h3>
               <p className="text-gray-500 text-sm">
@@ -22,7 +24,8 @@ function Book() {
           </div>
 
           <div className="flex items-start gap-4">
-            <img src="/payment-icon.png" alt="" className="w-10 h-10" />
+            {/* <img src="/payment-icon.png" alt="" className="w-10 h-10" /> */}
+            <FontAwesomeIcon icon={faCreditCard} class="w-10 h-10"/>
             <div>
               <h3 className="font-bold text-lg">Make Payment</h3>
               <p className="text-gray-500 text-sm">
@@ -32,7 +35,8 @@ function Book() {
           </div>
 
           <div className="flex items-start gap-4">
-            <img src="/airport-icon.png" alt="" className="w-10 h-10" />
+            {/* <img src="/airport-icon.png" alt="" className="w-10 h-10" /> */}
+            <FontAwesomeIcon icon={faTicket} class="w-10 h-10"/>
             <div>
               <h3 className="font-bold text-lg">Reach Airport on Selected Date</h3>
               <p className="text-gray-500 text-sm">
