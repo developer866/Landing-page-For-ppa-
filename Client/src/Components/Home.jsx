@@ -25,7 +25,7 @@ function Home() {
 
           <div className="flex items-center gap-2 cursor-pointer">
             <img
-              src="./Images/Play.png"
+              src="./Image.png"
               alt="play icon"
               className="h-10"
             />
