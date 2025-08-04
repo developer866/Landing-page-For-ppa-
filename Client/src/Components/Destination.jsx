@@ -23,7 +23,7 @@ function Destination() {
   ];
 
   return (
-    <section className="text-center  py-12 bg-white md:px-20">
+    <section className="text-center  p-12 bg-white md:px-20">
       <p className="text-orange-400 text-sm uppercase">Top Selling</p>
       <h2 className="text-3xl font-bold mb-10">Top Destinations</h2>
 
@@ -31,7 +31,7 @@ function Destination() {
         {destinations.map((dest, index) => (
           <div
             key={index}
-            className="rounded-xl overflow-hidden shadow-lg border hover:shadow-2xl transition duration-300"
+            className="rounded-xl overflow-hidden shadow-lg  hover:shadow-2xl transition duration-300"
           >
             <img
               src={dest.image}

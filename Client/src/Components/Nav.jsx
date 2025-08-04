@@ -46,7 +46,7 @@ function Nav() {
       {!show && (
         <ul
           ref={mobileMenuRef}
-          className="absolute top-0 right-0 pt-12 bg-yellow-500 text-white w-40 md:hidden flex flex-col gap-2 px-4 z-50 h-[40vh] rounded"
+          className="absolute top-0 right-0 pt-12 bg-yellow-500 text-white w-40 md:hidden flex flex-col gap-2 px-4 z-50 h-[25vh]  rounded"
         >
           <FontAwesomeIcon
             icon={faXmark}
